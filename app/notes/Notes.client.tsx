@@ -25,8 +25,8 @@ export default function NotesClient({
                                         initialPage,
                                         initialData,
                                     }: Props) {
-    const [searchText, setSearchText] = useState("");
-    const [currentPage, setCurrentPage] = useState(1);
+    const [searchText, setSearchText] = useState(initialSearch);
+    const [currentPage, setCurrentPage] = useState(initialPage);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const [debouncedSearch] = useDebounce(searchText, 300);
